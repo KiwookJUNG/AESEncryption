@@ -13,6 +13,7 @@
 		A0B918C8237D68BB00331528 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0B918C6237D68BB00331528 /* Main.storyboard */; };
 		A0B918CA237D68BD00331528 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0B918C9237D68BD00331528 /* Assets.xcassets */; };
 		A0B918CD237D68BD00331528 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0B918CB237D68BD00331528 /* LaunchScreen.storyboard */; };
+		B5454878C9F6AE5991401CB0 /* Pods_AESEncryption.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEACB785AEF8B3A4D4F699AD /* Pods_AESEncryption.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		A0B918C9237D68BD00331528 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A0B918CC237D68BD00331528 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A0B918CE237D68BD00331528 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF68E5858CA4C60179A6AB41 /* Pods-AESEncryption.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AESEncryption.debug.xcconfig"; path = "Target Support Files/Pods-AESEncryption/Pods-AESEncryption.debug.xcconfig"; sourceTree = "<group>"; };
+		F188C83A11B6091344F254BE /* Pods-AESEncryption.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AESEncryption.release.xcconfig"; path = "Target Support Files/Pods-AESEncryption/Pods-AESEncryption.release.xcconfig"; sourceTree = "<group>"; };
+		FEACB785AEF8B3A4D4F699AD /* Pods_AESEncryption.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AESEncryption.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5454878C9F6AE5991401CB0 /* Pods_AESEncryption.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		61F6E67B6C2E05DCFBF5793D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BF68E5858CA4C60179A6AB41 /* Pods-AESEncryption.debug.xcconfig */,
+				F188C83A11B6091344F254BE /* Pods-AESEncryption.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		A0B918B4237D68BB00331528 = {
 			isa = PBXGroup;
 			children = (
 				A0B918BF237D68BB00331528 /* AESEncryption */,
 				A0B918BE237D68BB00331528 /* Products */,
+				61F6E67B6C2E05DCFBF5793D /* Pods */,
+				BDE77CF65AC1DD51CBD0DAC2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +84,14 @@
 			path = AESEncryption;
 			sourceTree = "<group>";
 		};
+		BDE77CF65AC1DD51CBD0DAC2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FEACB785AEF8B3A4D4F699AD /* Pods_AESEncryption.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A0B918D1237D68BD00331528 /* Build configuration list for PBXNativeTarget "AESEncryption" */;
 			buildPhases = (
+				127DB257101B197912E346B7 /* [CP] Check Pods Manifest.lock */,
 				A0B918B9237D68BB00331528 /* Sources */,
 				A0B918BA237D68BB00331528 /* Frameworks */,
 				A0B918BB237D68BB00331528 /* Resources */,
+				2C15B854650A7778E9E62E04 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		127DB257101B197912E346B7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AESEncryption-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2C15B854650A7778E9E62E04 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AESEncryption/Pods-AESEncryption-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AESEncryption/Pods-AESEncryption-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AESEncryption/Pods-AESEncryption-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A0B918B9237D68BB00331528 /* Sources */ = {
@@ -282,6 +351,7 @@
 		};
 		A0B918D2237D68BD00331528 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF68E5858CA4C60179A6AB41 /* Pods-AESEncryption.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +370,7 @@
 		};
 		A0B918D3237D68BD00331528 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F188C83A11B6091344F254BE /* Pods-AESEncryption.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
